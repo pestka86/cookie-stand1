@@ -1,3 +1,5 @@
+/* forward slash opens those bracket to make own comments*/
+
 * {
     box-sizing: border-box;
 }
@@ -5,7 +7,15 @@
 body {
     font-family: 'Poppins', sans-serif;
      font-size: 1rem;
+     font-weight: 400;
+     letter-spacing: 0.01em;
+     line-height: 1.6;
      color: black;
+}
+
+img {
+    width: 100%;
+    display: block;
 }
 
 header {
@@ -14,12 +24,15 @@ header {
 
 .container {
     width: 90%;
+    max-width: 1024px;
     margin: 0 auto;
 }
 
 .header-container {
     padding: 1.5rem 0;
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 h1 {
@@ -29,13 +42,72 @@ h1 {
 }
 
 li {
-    letter-spacing: none;
+    list-style: none;
     display: inline-block;
     margin: 0 0.5rem;
+    cursor: pointer;
+    transition: 0.5s;
 
 }
 
+li:hover {
+    color: white;
+}
 a {
     text-decoration: none;
-    color: inherit;
+    color: inherit; 
+}
+/* inherit take comands from parent */
+
+
+.main-container {
+    height: 100px;
+
+}
+
+.hero-img {
+    max-height: 300px;
+    object-fit: cover;
+    
+}
+
+.hero-text {
+    width: 90%;
+    max-width: 60ch;
+    margin: 0 2rem auto;
+}
+
+.cookie-section {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.img-container {
+    margin-bottom: 1rem;
+}
+
+.cookie-img {
+    max-height: 200px;
+    object-fit: cover
+}
+
+
+
+@media (min-width: 700px) {
+    .header-container {
+      text-align: left;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+h1 {
+    margin: 0 0 0 1;
+}
+
+footer {
+    text-align: center;
+    background-color: pink;
 }
